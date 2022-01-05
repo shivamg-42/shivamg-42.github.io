@@ -1,0 +1,37 @@
+<form [formGroup] = "tireForm" (ngSubmit)="onSubmit()">
+    <label for="date">Date: </label>
+    <input type="date" id="date" formControlName="date">
+    <label for="leftFront">Left Front: </label>
+    <input type="text" id="leftFront" formControlName="lf"  placeholder="LF">
+    <label for="leftRear">Left Rear: </label>
+    <input type="text" id="leftRear" formControlName="lr" placeholder="LR">
+    <label for="rightFront">Right Front: </label>
+    <input type="text" id="rightFront" formControlName="rf" placeholder="RF">
+    <label for="rightRear">Right Rear: </label>
+    <input type="text"  id="rightRear" formControlName="rr" placeholder="RR">
+    
+
+    <button type="submit" [disabled]="!tireForm.valid">Submit</button>
+
+</form>
+
+
+
+
+
+<!-- <div>
+    <h2>Input Pressure</h2>
+    Date <input type="date" id="data-date" [(ngModel)]="data.date" placeholder="date">
+    LF: <input type="text" id="data-LeftFront" [(ngModel)]="data.LeftFront" placeholder="LF">
+    LR: <input type="text" id="data-LeftRear" [(ngModel)]="data.LeftRear" placeholder="LR">
+    RF: <input type="text" id="data-RightFront" [(ngModel)]="data.RightFront" placeholder="RF">
+    RR: <input type="text"  id="data-RightRear" [(ngModel)]="data.RightRear" placeholder="RR">
+    <button (click)="add()">Add</button>
+</div> -->
+
+<!-- <label for="name">Name: </label>
+<input id="name" type="text" [formControl]="name">
+
+<p>Value: {{ name.value }}</p>
+
+<button (click)="updateName()">Update Name</button> -->
